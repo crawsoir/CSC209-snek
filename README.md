@@ -18,4 +18,4 @@ An interpretation of the classic snake game. Playable for a single player.
 * [Processing](https://processing.org/)
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the MIT License - see the LICENSE.md file for details
