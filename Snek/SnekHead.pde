@@ -39,7 +39,7 @@ public class SnekHead{
     public void draw(){
         rect(px,py,20,20); 
     }
-    public boolean eat(Food food){
+    public boolean eat(Consumable food){
         if(dist(this.px,this.py,food.getFX(),food.getFY())<1){
             return true;
         }
