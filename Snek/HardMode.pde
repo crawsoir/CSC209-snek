@@ -3,4 +3,4 @@ public class HardMode implements GameMode{
   }
   public void create(){
   }
-}
+}  
