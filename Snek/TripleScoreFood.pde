@@ -18,7 +18,7 @@ public class TripleScoreFood implements Consumable{
       rect(fx, fy, 20, 20);
       fill(255, 0, 0);
       textSize(15);
-      text("x3", fx-8, fy+5);
+      text("x3", fx+5, fy+12);
     }
     public void update(){
       score += 30;

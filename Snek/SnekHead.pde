@@ -13,6 +13,15 @@ public class SnekHead{
         this.sx = x;
         this.sy = y;
     }
+    
+    //temporary usage to reset snake upon game restart
+    public void setXY(int x, int y){
+      this.px = x;
+      this.py = y;
+      this.sx = 0;
+      this.sy = 0;
+      next = new SnekTail();
+    }
     public void setTrue(){
         this.newPart = true; 
     }
@@ -26,8 +35,8 @@ public class SnekHead{
         int prevy = this.py;
         this.px += this.sx;
         this.py += this.sy;
-        this.px = constrain(this.px, 10, width-10);
-        this.py = constrain(this.py, 10, height-10);
+        //this.px = constrain(this.px, 10, width-10);
+        //this.py = constrain(this.py, 10, height-10);
         this.draw();
         if(newPart){
             newPart = false;
@@ -47,5 +56,9 @@ public class SnekHead{
             return false;  
         }
     }
+    
+    boolean borderCollide(){
+      return (this.px <= 0 | this.px+10 >= width | this.py <= 0 | this.py+10 >= height);
+    }
+    
 }
-  
