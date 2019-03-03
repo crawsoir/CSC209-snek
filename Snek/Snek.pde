@@ -41,10 +41,10 @@ import java.util.Random;
         
           python.update();
           if (python.eat(food)){
-           food.update();
-           food = CFactory.getConsumable(foodArray[r.nextInt(2)]);
-           food.pickLocation(); 
-           python.setTrue();
+            food.update();
+            food = CFactory.getConsumable(foodArray[r.nextInt(2)]);
+            food.pickLocation(); 
+            python.setTrue();
           }
           food.draw();
         }
@@ -59,23 +59,23 @@ import java.util.Random;
     void keyPressed(){
       if(gameScreen == 1){
         if(keyCode == UP && !(movementLock.equals("Up"))){
-          python.setSpeed(0,-scl);
+          python.setSpeed(0, -scl);
           movementLock = "Down";
         }
         if(keyCode == DOWN && !movementLock.equals("Down")){
-          python.setSpeed(0,scl);
+          python.setSpeed(0, scl);
           movementLock = "Up";
         }
         if(keyCode == LEFT && !movementLock.equals("Left")){
-          python.setSpeed(-scl,0);
+          python.setSpeed(-scl, 0);
           movementLock = "Right";
         }
         if(keyCode == RIGHT && !movementLock.equals("Right")){
-          python.setSpeed(scl,0);
+          python.setSpeed(scl, 0);
           movementLock = "Left";
         }
       }
     }
     void drawBackground(){
-        background(0); 
+      background(0); 
     }
