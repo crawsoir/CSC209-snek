@@ -1,4 +1,5 @@
 import java.util.Random;
+import ddf.minim.*;
     //0: Initial Screen
     //1: Game Screen
     int gameScreen = 0;
@@ -13,12 +14,19 @@ import java.util.Random;
     int cols = 600 / scl;
     int rows = 600 / scl;
     int score = 0;
-      
+    
+    Minim minim; 
+    AudioPlayer player;
+        
     void setup(){
         size(600, 600);
         noStroke();
         frameRate(15);
         food.pickLocation();
+        //create sound player
+        minim = new Minim(this);
+        player = minim.loadFile("pop.mp3");
+
     }
     void draw(){
         drawBackground(); 
@@ -41,6 +49,9 @@ import java.util.Random;
         
           python.update();
           if (python.eat(food)){
+            //rewind pop sound and play
+            player.rewind();
+            player.play();
             food.update();
             food = CFactory.getConsumable(foodArray[r.nextInt(2)]);
             food.pickLocation(); 
