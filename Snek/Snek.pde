@@ -42,6 +42,7 @@ void draw() {
     if (menuScreen.buttonPressed) {
       gameScreen.python.setXY(10, 10);
       gameScreen.movementLock = "Up";
+      score = 0;
       currentScreen = 1;
     }
   }
