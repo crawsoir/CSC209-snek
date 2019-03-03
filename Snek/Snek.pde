@@ -1,4 +1,5 @@
 import java.util.Random;
+import processing.sound.*;
     //0: Initial Screen
     //1: Game Screen
     int gameScreen = 0;
@@ -9,6 +10,15 @@ import java.util.Random;
     ConsumableFactory CFactory = new ConsumableFactory();
     Consumable food = CFactory.getConsumable(foodArray[r.nextInt(2)]);
     SnekHead python = new SnekHead(10,10);
+    //Background music
+    SoundFile backgroundFile;
+    String backAudioName = "Testing.mp3";
+    String path1;
+    //Background sound for food collection
+    SoundFile foodFile;
+    String foodAudioName = "Temp1.mp3";
+    String path2;
+    
     int scl = 20;
     int cols = 600 / scl;
     int rows = 600 / scl;
@@ -19,6 +29,11 @@ import java.util.Random;
         noStroke();
         frameRate(15);
         food.pickLocation();
+        path1 = sketchPath(backAudioName);
+        backgroundFile = new SoundFile(this, path1);
+        backgroundFile.play();
+        path2 = sketchPath(foodAudioName);
+        foodFile = new SoundFile(this, path2);
     }
     void draw(){
         drawBackground(); 
@@ -45,6 +60,8 @@ import java.util.Random;
             food = CFactory.getConsumable(foodArray[r.nextInt(2)]);
             food.pickLocation(); 
             python.setTrue();
+            //Play sound
+            foodFile.play();
           }
           food.draw();
         }
