@@ -29,11 +29,9 @@ import processing.sound.*;
         noStroke();
         frameRate(15);
         food.pickLocation();
-        path1 = sketchPath(backAudioName);
-        backgroundFile = new SoundFile(this, path1);
+        setupSound();
         backgroundFile.play();
-        path2 = sketchPath(foodAudioName);
-        foodFile = new SoundFile(this, path2);
+        
     }
     void draw(){
         drawBackground(); 
@@ -95,4 +93,10 @@ import processing.sound.*;
     }
     void drawBackground(){
       background(0); 
+    }
+    void setupSound(){
+      path1 = sketchPath(backAudioName);
+      path2 = sketchPath(foodAudioName);
+      backgroundFile = new SoundFile(this, path1);
+      foodFile = new SoundFile(this, path2);
     }
