@@ -28,7 +28,7 @@ class Button {
     textAlign(CENTER, CENTER);
     fill(0);
     //textSize(25);
-    text(label, x + (w /30), y + (h / 40));
+    text(label, x + (w / 30), y + (h / 40));
   }
  
   boolean mousePressed(){

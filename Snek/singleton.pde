@@ -1,6 +1,6 @@
 public class Singleton {
   
-  private static Singleton snake = null;
+  private Singleton snake = null;
   
   //Avoid creating more than one snake
   private Singleton() {}

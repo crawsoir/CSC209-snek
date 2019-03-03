@@ -4,13 +4,13 @@ public class Collision {
   //bx and by are snake body coordinates
   //brx and bry are barrier coordinates
 
-  public static int hx;
-  public static int hy;
-  public static int bx;
-  public static int by;
-  public static int brx;
-  public static int bry;
-  public static boolean death = false;
+  public int hx;
+  public int hy;
+  public int bx;
+  public int by;
+  public int brx;
+  public int bry;
+  public boolean death = false;
   
   public void snakeHead(int x, int y) {
     
