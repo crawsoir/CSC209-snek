@@ -22,6 +22,6 @@ public class SnekBody implements SnekParts{
         next.update(prevx, prevy);
     }
     public void draw(){
-        rect(px, py, 20, 20); 
+        image(spriteBody, px, py); 
     }
 }

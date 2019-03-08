@@ -17,6 +17,10 @@ String path1;
 SoundFile foodFile;
 String foodAudioName = "Temp1.mp3";
 String path2;
+//Snake head sprite
+PImage spriteHead;
+//Snake body sprite
+PImage spriteBody;
 
 int scl = 20;
 int cols = 600 / scl;
@@ -29,6 +33,7 @@ void setup() {
   frameRate(15);
   rectMode(CORNER);
   setupSound();
+  setupArt();
   backgroundFile.play();
   gameScreen.food.pickLocation();
 }
@@ -95,4 +100,8 @@ void setupSound() {
   path2 = sketchPath(foodAudioName);
   backgroundFile = new SoundFile(this, path1);
   foodFile = new SoundFile(this, path2);
+}
+void setupArt(){
+  spriteBody = loadImage("tempbody.jpg");
+  spriteHead = loadImage("temphead.png");
 }

@@ -46,7 +46,7 @@ public class SnekHead{
         
     }
     public void draw(){
-        rect(px, py, 20, 20); 
+        image(spriteHead,px, py); 
     }
     public boolean eat(Consumable food){
         if(dist(this.px, this.py, food.getFX(), food.getFY()) < 1){
