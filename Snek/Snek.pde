@@ -104,8 +104,8 @@ void setupSound() {
   foodFile = new SoundFile(this, path2);
 }
 void setupArt(){
-  spriteBody = loadImage("spritebody_1.png");
-  spriteHead = loadImage("spritehead_1.png");
+  spriteBody = loadImage("spritebody_2.png");
+  spriteHead = loadImage("spritehead_2.png");
   spriteNormalFood = loadImage("spritenormalfood.png");
   spriteTripleFood = loadImage("spritetriplefood.png");
   backgroundArt = loadImage("background_1.png");
