@@ -17,10 +17,12 @@ String path1;
 SoundFile foodFile;
 String foodAudioName = "Temp1.mp3";
 String path2;
-//Snake head sprite
+//Images
 PImage spriteHead;
-//Snake body sprite
 PImage spriteBody;
+PImage spriteNormalFood;
+PImage spriteTripleFood;
+PImage backgroundArt;
 
 int scl = 20;
 int cols = 600 / scl;
@@ -93,7 +95,7 @@ void mouseClicked() {
 
 
 void drawBackground() {
-  background(0);
+  background(backgroundArt);
 }
 void setupSound() {
   path1 = sketchPath(backAudioName);
@@ -102,6 +104,9 @@ void setupSound() {
   foodFile = new SoundFile(this, path2);
 }
 void setupArt(){
-  spriteBody = loadImage("tempbody.jpg");
-  spriteHead = loadImage("temphead.png");
+  spriteBody = loadImage("spritebody_1.png");
+  spriteHead = loadImage("spritehead_1.png");
+  spriteNormalFood = loadImage("spritenormalfood.png");
+  spriteTripleFood = loadImage("spritetriplefood.png");
+  backgroundArt = loadImage("background_1.png");
 }

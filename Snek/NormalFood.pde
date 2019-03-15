@@ -14,7 +14,7 @@ public class NormalFood implements Consumable{
         return this.fy;  
     }
     public void draw(){
-      rect(fx, fy, 20, 20);
+      image(spriteNormalFood, fx, fy); 
     }
     public void update(){
       score += 10;

@@ -14,11 +14,7 @@ public class TripleScoreFood implements Consumable{
         return this.fy;  
     }
     public void draw(){
-      fill(0, 255, 0);
-      rect(fx, fy, 20, 20);
-      fill(255, 0, 0);
-      textSize(15);
-      text("x3", fx+5, fy+12);
+      image(spriteTripleFood, fx, fy); 
     }
     public void update(){
       score += 30;
