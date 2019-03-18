@@ -4,16 +4,6 @@ public class MenuStrategy implements ScreenStrategy {
   public MenuStrategy() {
   }
 
-//Bugged
-  //void mouseClicked() {
-  //  //play game button pressed
-  //  if (play_button.MouseIsOver()) {
-  //    //display play game screen
-  //    buttonPressed = true;
-  //  }
-  //}
-
-
 @Override
   public void display() {
   //this.mouseClicked();
