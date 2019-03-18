@@ -47,10 +47,16 @@ void draw() {
   if (currentScreen == 0) {
     menuScreen.display();
     if (menuScreen.buttonPressed) {
+      //reset python and score
       gameScreen.python.setXY(10, 10);
+      gameScreen.python.setSpeed(0,0);
       gameScreen.movementLock = "Up";
       score = 0;
+      keyCode = 0;
+      
       currentScreen = 1;
+      menuScreen.buttonPressed = false;
+      
     }
   }
   //play game screen
@@ -65,6 +71,7 @@ void draw() {
     gameOverScreen.display();
     if (gameOverScreen.buttonPressed) {
       currentScreen = 0;
+      gameOverScreen.buttonPressed = false;
     }
   }
 }
@@ -72,9 +79,9 @@ void collision() {
   //button color change
   if (currentScreen == 0) {
     if (menuScreen.play_button.MouseIsOver())
-      menuScreen.play_button.clr= color(180);
+      menuScreen.play_button.clr= color(150);
     else
-      menuScreen.play_button.clr= color(214);
+      menuScreen.play_button.clr= color(230);
   } else if (currentScreen == 2) {
     if (gameOverScreen.menu_button.MouseIsOver())
       gameOverScreen.menu_button.clr= color (180);
@@ -83,13 +90,14 @@ void collision() {
   }
  }
 
-//Note: Temporary have this here as mouseClicked is bugged inside menuStrategy, it doesnt detect clicks but simply detects intersection!
-//Same bug happens when u hover over the Menu button in the Gameover screen.
 void mouseClicked() {
     //play game button pressed
-    if (menuScreen.play_button.MouseIsOver()) {
+    if (menuScreen.play_button.MouseIsOver() && currentScreen == 0) {
       //display play game screen
-      currentScreen = 1;
+      menuScreen.buttonPressed = true;
+    }
+    if (gameOverScreen.menu_button.MouseIsOver() && currentScreen == 2) {
+      gameOverScreen.buttonPressed = true;
     }
   }
 

@@ -7,16 +7,10 @@ Button menu_button = new Button("Menu", 200, 200, 200, 100, (214));
 boolean buttonPressed;
   public GameOverStrategy() {
   }
-  void mouseClicked() {
-
-    if (menu_button.MouseIsOver()) {
-      buttonPressed = true;
-    }
-  }
-
+  
   @Override
     public void display() {
-    this.mouseClicked();
+    fill(255,0,0);
     textSize(40);
     text("Game Over", width / 2.5, 100);
     textSize(25);

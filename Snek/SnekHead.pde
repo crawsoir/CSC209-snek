@@ -1,7 +1,7 @@
 public class SnekHead{
     private int px;
     private int py;
-    private int sx = scl;
+    private int sx = 0;
     private int sy = 0;
     private SnekParts next = new SnekTail();
     private Boolean newPart = false;
@@ -14,13 +14,14 @@ public class SnekHead{
         this.sy = y;
     }
     
-    //temporary usage to reset snake upon game restart
+    //reset snake upon game restart
     public void setXY(int x, int y){
+      next = new SnekTail();
       this.px = x;
       this.py = y;
       this.sx = 0;
       this.sy = 0;
-      next = new SnekTail();
+      
     }
     public void setTrue(){
         this.newPart = true; 
@@ -35,8 +36,6 @@ public class SnekHead{
         int prevy = this.py;
         this.px += this.sx;
         this.py += this.sy;
-        //this.px = constrain(this.px, 10, width-10);
-        //this.py = constrain(this.py, 10, height-10);
         this.draw();
         if(newPart){
             newPart = false;
