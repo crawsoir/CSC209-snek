@@ -1,7 +1,7 @@
 import java.util.Random;
 import processing.sound.*;
 import javax.swing.JOptionPane;
-
+import java.util.*; 
 
 //0: Initial Screen
 //1: Game Screen
@@ -24,6 +24,11 @@ PImage spriteBody;
 PImage spriteNormalFood;
 PImage spriteTripleFood;
 PImage backgroundArt;
+int totalSpriteSets = 2;
+  
+Random rand = new Random();
+//random sprite set choice
+int spriteSetChoice = rand.nextInt(totalSpriteSets);
 
 int scl = 20;
 int cols = 600 / scl;
@@ -56,8 +61,7 @@ void draw() {
       keyCode = 0;
       
       currentScreen = 1;
-      menuScreen.buttonPressed = false;
-      
+      menuScreen.buttonPressed = false; 
     }
   }
   //play game screen
@@ -73,6 +77,10 @@ void draw() {
     if (gameOverScreen.buttonPressed) {
       currentScreen = 0;
       gameOverScreen.buttonPressed = false;
+      
+      //load new random sprite set
+      spriteSetChoice = rand.nextInt(totalSpriteSets);  //change value of nextInt() by #(sets of sprites)-1
+      setupArt();  
     }
   }
 }
@@ -128,9 +136,18 @@ void setupSound() {
   foodFile = new SoundFile(this, path2);
 }
 void setupArt(){
-  spriteBody = loadImage("spritebody_2.png");
-  spriteHead = loadImage("spritehead_2.png");
+  /** image string array index is arranged as following:
+   *  0: snake head
+   *  1: snake body
+   *  2: background image
+   */
+  HashMap<Integer, String[]> spriteSet = new HashMap<Integer, String[]>();
+  spriteSet.put(0, new String[]{"spritehead_1.png","spritebody_1.png","background_1.png"});
+  spriteSet.put(1, new String[]{"spritehead_2.png","spritebody_2.png","background_2.png"});
+  
+  spriteHead = loadImage(spriteSet.get(spriteSetChoice)[0]);
+  spriteBody = loadImage(spriteSet.get(spriteSetChoice)[1]);
+  backgroundArt = loadImage(spriteSet.get(spriteSetChoice)[2]);
   spriteNormalFood = loadImage("spritenormalfood.png");
   spriteTripleFood = loadImage("spritetriplefood.png");
-  backgroundArt = loadImage("background_2.png");
 }
