@@ -132,5 +132,5 @@ void setupArt(){
   spriteHead = loadImage("spritehead_2.png");
   spriteNormalFood = loadImage("spritenormalfood.png");
   spriteTripleFood = loadImage("spritetriplefood.png");
-  backgroundArt = loadImage("background_1.png");
+  backgroundArt = loadImage("background_2.png");
 }
