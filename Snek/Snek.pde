@@ -97,6 +97,10 @@ void mouseClicked() {
       //display play game screen
       menuScreen.buttonPressed = true;
     }
+    if (menuScreen.instructions_button.MouseIsOver() && currentScreen == 0) {
+      JOptionPane.showMessageDialog(null, "Press play game and any arrow key to start the game. Control the snake using your arrow keys. Avoid colliding with the snake tail and wall.",
+        "Instructions", JOptionPane.INFORMATION_MESSAGE);//Display instructions on pop up
+    }
     if (gameOverScreen.menu_button.MouseIsOver() && currentScreen == 2) {
       gameOverScreen.buttonPressed = true;
     }
