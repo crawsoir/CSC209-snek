@@ -1,5 +1,6 @@
 import java.util.Random;
 import processing.sound.*;
+import javax.swing.JOptionPane;
 
 
 //0: Initial Screen
@@ -98,6 +99,13 @@ void mouseClicked() {
     }
     if (gameOverScreen.menu_button.MouseIsOver() && currentScreen == 2) {
       gameOverScreen.buttonPressed = true;
+    }
+    //Pause button was pressed
+    if (gameScreen.pause_button.MouseIsOver() && currentScreen == 1) {
+      gameScreen.python.setSpeed(0,0);//Stop the snake
+      Object[] options = {"Continue"};
+      JOptionPane.showOptionDialog(null, "Game Paused", null, JOptionPane.OK_OPTION,
+        JOptionPane.PLAIN_MESSAGE, null, options, options[0]);//Display paused game pop up
     }
   }
 
