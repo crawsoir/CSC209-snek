@@ -107,6 +107,10 @@ void mouseClicked() {
       JOptionPane.showOptionDialog(null, "Game Paused", null, JOptionPane.OK_OPTION,
         JOptionPane.PLAIN_MESSAGE, null, options, options[0]);//Display paused game pop up
     }
+    //Quit Button was pressed
+    if (gameScreen.quit_button.MouseIsOver() && currentScreen == 1) {
+       currentScreen = 0; //Set to initial menu screen
+    }
   }
 
 
