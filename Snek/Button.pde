@@ -33,19 +33,7 @@ class Button {
     text(label, x + (w / 5), y + (h / 2));
   }
  
-  //boolean mouseClicked(){
-  //  if (MouseIsOver()){
-  //    return true;
-  //  } else {
-  //    return false;
-  //  }
-  //}
-//  boolean MouseIsOver() {
-//    if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
-//      return true;
-//    }
-//    return false;
-// }
+
   boolean MouseIsOver()
   {
     return (mouseX<=x+w) && (mouseY<=y+h) && (mouseX>=x) && (mouseY>=y);

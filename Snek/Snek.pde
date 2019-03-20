@@ -62,7 +62,7 @@ void draw() {
   //play game screen
   if (currentScreen == 1) {
     gameScreen.display();
-    if (gameScreen.python.borderCollide()) {
+    if (gameScreen.python.borderCollide() || gameScreen.python.bodyCollide()) {
       currentScreen = 2;
     }
   }
