@@ -1,13 +1,19 @@
 public class SnekBody implements SnekParts{
     private int px;
     private int py;
-    private int sx = scl;
-    private int sy = 0;
     private SnekParts next = new SnekTail();
+    
     public SnekBody(int x, int y){
         this.px = x;
         this.py = y;
     }
+    public int getX(){
+      return this.px;
+    }
+    public int getY(){
+      return this.py;
+    }
+    
     public void setNext(SnekParts next){
       this.next = next;
     }

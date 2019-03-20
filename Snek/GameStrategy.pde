@@ -18,6 +18,7 @@ public class GameStrategy implements ScreenStrategy {
     this.keyPressed();
     textSize(25);
     textAlign(LEFT, LEFT);
+    fill(0);
     text("Score: " + score, 5, 28);
     pause_button.Draw();
     quit_button.Draw();

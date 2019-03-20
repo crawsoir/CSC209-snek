@@ -60,4 +60,23 @@ public class SnekHead{
       return (this.px <= 0 | this.px+10 >= width | this.py <= 0 | this.py+10 >= height);
     }
     
+    boolean bodyCollide(){
+      if (next instanceof SnekBody){
+         SnekBody dup = (SnekBody)next;
+         //check collision with each body part
+         while (dup instanceof SnekBody){
+             if ((this.px <= (dup.getX()+10)) && (this.py <= dup.getY()+10) && (this.px+10 >= dup.getX()) && (this.py+10 >= dup.getY())){
+               return true;
+           }
+           if (dup.next instanceof SnekBody){
+              dup = (SnekBody)dup.next;
+           }
+           else
+             break;
+      }
+      }
+      return false;
+    }
+    
+    
 }
