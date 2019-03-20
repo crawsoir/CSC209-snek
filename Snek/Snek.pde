@@ -25,7 +25,7 @@ PImage spriteNormalFood;
 PImage spriteTripleFood;
 PImage backgroundArt;
 int totalSpriteSets = 2;
-  
+
 Random rand = new Random();
 //random sprite set choice
 int spriteSetChoice = rand.nextInt(totalSpriteSets);
@@ -55,13 +55,13 @@ void draw() {
     if (menuScreen.buttonPressed) {
       //reset python and score
       gameScreen.python.setXY(10, 10);
-      gameScreen.python.setSpeed(0,0);
+      gameScreen.python.setSpeed(0, 0);
       gameScreen.movementLock = "Up";
       score = 0;
       keyCode = 0;
-      
+
       currentScreen = 1;
-      menuScreen.buttonPressed = false; 
+      menuScreen.buttonPressed = false;
     }
   }
   //play game screen
@@ -77,10 +77,10 @@ void draw() {
     if (gameOverScreen.buttonPressed) {
       currentScreen = 0;
       gameOverScreen.buttonPressed = false;
-      
+
       //load new random sprite set
       spriteSetChoice = rand.nextInt(totalSpriteSets);  //change value of nextInt() by #(sets of sprites)-1
-      setupArt();  
+      setupArt();
     }
   }
 }
@@ -97,33 +97,33 @@ void collision() {
     else
       gameOverScreen.menu_button.clr= color (214);
   }
- }
+}
 
 void mouseClicked() {
-    //play game button pressed
-    if (menuScreen.play_button.MouseIsOver() && currentScreen == 0) {
-      //display play game screen
-      menuScreen.buttonPressed = true;
-    }
-    if (menuScreen.instructions_button.MouseIsOver() && currentScreen == 0) {
-      JOptionPane.showMessageDialog(null, "Press play game and any arrow key to start the game. Control the snake using your arrow keys. Avoid colliding with the snake tail and wall.",
-        "Instructions", JOptionPane.INFORMATION_MESSAGE);//Display instructions on pop up
-    }
-    if (gameOverScreen.menu_button.MouseIsOver() && currentScreen == 2) {
-      gameOverScreen.buttonPressed = true;
-    }
-    //Pause button was pressed
-    if (gameScreen.pause_button.MouseIsOver() && currentScreen == 1) {
-      gameScreen.python.setSpeed(0,0);//Stop the snake
-      Object[] options = {"Continue"};
-      JOptionPane.showOptionDialog(null, "Game Paused", null, JOptionPane.OK_OPTION,
-        JOptionPane.PLAIN_MESSAGE, null, options, options[0]);//Display paused game pop up
-    }
-    //Quit Button was pressed
-    if (gameScreen.quit_button.MouseIsOver() && currentScreen == 1) {
-       currentScreen = 0; //Set to initial menu screen
-    }
+  //play game button pressed
+  if (menuScreen.play_button.MouseIsOver() && currentScreen == 0) {
+    //display play game screen
+    menuScreen.buttonPressed = true;
   }
+  if (menuScreen.instructions_button.MouseIsOver() && currentScreen == 0) {
+    JOptionPane.showMessageDialog(null, "Press play game and any arrow key to start the game. Control the snake using your arrow keys. Avoid colliding with the snake tail and wall.", 
+      "Instructions", JOptionPane.INFORMATION_MESSAGE);//Display instructions on pop up
+  }
+  if (gameOverScreen.menu_button.MouseIsOver() && currentScreen == 2) {
+    gameOverScreen.buttonPressed = true;
+  }
+  //Pause button was pressed
+  if (gameScreen.pause_button.MouseIsOver() && currentScreen == 1) {
+    gameScreen.python.setSpeed(0, 0);//Stop the snake
+    Object[] options = {"Continue"};
+    JOptionPane.showOptionDialog(null, "Game Paused", null, JOptionPane.OK_OPTION, 
+      JOptionPane.PLAIN_MESSAGE, null, options, options[0]);//Display paused game pop up
+  }
+  //Quit Button was pressed
+  if (gameScreen.quit_button.MouseIsOver() && currentScreen == 1) {
+    currentScreen = 0; //Set to initial menu screen
+  }
+}
 
 
 void drawBackground() {
@@ -135,16 +135,16 @@ void setupSound() {
   backgroundFile = new SoundFile(this, path1);
   foodFile = new SoundFile(this, path2);
 }
-void setupArt(){
+void setupArt() {
   /** image string array index is arranged as following:
    *  0: snake head
    *  1: snake body
    *  2: background image
    */
   HashMap<Integer, String[]> spriteSet = new HashMap<Integer, String[]>();
-  spriteSet.put(0, new String[]{"spritehead_1.png","spritebody_1.png","background_1.png"});
-  spriteSet.put(1, new String[]{"spritehead_2.png","spritebody_2.png","background_2.png"});
-  
+  spriteSet.put(0, new String[]{"spritehead_1.png", "spritebody_1.png", "background_1.png"});
+  spriteSet.put(1, new String[]{"spritehead_2.png", "spritebody_2.png", "background_2.png"});
+
   spriteHead = loadImage(spriteSet.get(spriteSetChoice)[0]);
   spriteBody = loadImage(spriteSet.get(spriteSetChoice)[1]);
   backgroundArt = loadImage(spriteSet.get(spriteSetChoice)[2]);

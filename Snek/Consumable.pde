@@ -1,4 +1,4 @@
-public interface Consumable{
+public interface Consumable {
   void draw();
   void update();
   public void pickLocation();

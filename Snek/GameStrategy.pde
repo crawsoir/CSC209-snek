@@ -10,9 +10,10 @@ public class GameStrategy implements ScreenStrategy {
   SnekHead python = new SnekHead(10, 10);
   Button pause_button = new Button("Pause", 450, 50, 100, 50, (214));
   Button quit_button = new Button("Quit", 450, 125, 100, 50, (214));
-  
-  public GameStrategy(){}
-  
+
+  public GameStrategy() {
+  }
+
   @Override
     public void display() {
     this.keyPressed();
@@ -22,7 +23,7 @@ public class GameStrategy implements ScreenStrategy {
     text("Score: " + score, 5, 28);
     pause_button.Draw();
     quit_button.Draw();
-    
+
     python.update();
     if (python.eat(food)) {
       food.update();
@@ -34,24 +35,23 @@ public class GameStrategy implements ScreenStrategy {
     }
     food.draw();
   }
-  
-  void keyPressed(){
-        if(keyCode == UP && !(movementLock.equals("Up"))){
-          python.setSpeed(0, -scl);
-          movementLock = "Down";
-        }
-        if(keyCode == DOWN && !movementLock.equals("Down")){
-          python.setSpeed(0, scl);
-          movementLock = "Up";
-        }
-        if(keyCode == LEFT && !movementLock.equals("Left")){
-          python.setSpeed(-scl, 0);
-          movementLock = "Right";
-        }
-        if(keyCode == RIGHT && !movementLock.equals("Right")){
-          python.setSpeed(scl, 0);
-          movementLock = "Left";
-        }
-      }
-    
+
+  void keyPressed() {
+    if (keyCode == UP && !(movementLock.equals("Up"))) {
+      python.setSpeed(0, -scl);
+      movementLock = "Down";
+    }
+    if (keyCode == DOWN && !movementLock.equals("Down")) {
+      python.setSpeed(0, scl);
+      movementLock = "Up";
+    }
+    if (keyCode == LEFT && !movementLock.equals("Left")) {
+      python.setSpeed(-scl, 0);
+      movementLock = "Right";
+    }
+    if (keyCode == RIGHT && !movementLock.equals("Right")) {
+      python.setSpeed(scl, 0);
+      movementLock = "Left";
+    }
+  }
 }

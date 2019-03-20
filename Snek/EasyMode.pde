@@ -1,6 +1,6 @@
-public class EasyMode implements GameMode{
-  public EasyMode(){
+public class EasyMode implements GameMode {
+  public EasyMode() {
   }
-  public void create(){
+  public void create() {
   }
 }
