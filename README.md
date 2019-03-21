@@ -2,8 +2,7 @@
 * **Qianqian Feng** - _Contributor_  
 * **William Li** - _Contributor_  
 * **Manahil Masroor** - _Contributor_  
-* **David Huynh** - _Contributor_  
-* **BingMing Zhang** - _Contributor_ 
+* **David Huynh** - _Contributor_ 
 
 # CSC209-snek
 An interpretation of the classic snake game. Playable for a single player. 
@@ -13,7 +12,8 @@ An interpretation of the classic snake game. Playable for a single player.
 
 ## Installation
 WINDOWS
-Download and run the executable file (provide link to final version later -to create .exe just go to File->Export Application)
+Download and run the executable file
+  //TODO: (provide link to final version later -to create .exe just go to File->Export Application)
 
 ## How to Play
 - The home screen contains Play, Exit and Instruction buttons:
@@ -29,12 +29,19 @@ Download and run the executable file (provide link to final version later -to cr
   - Click the Menu button to be returned back to the menu where you can restart your game or look at instructions
 
 ## Directory Structure
-//TODO
+  //TODO
 ## Major Classes and Functions
 - Snek.pde contains the major game loops to setup the view of the game and makes any changes when the user interacts with the game
-## How to Extend our Game
- //TODO
 
+## Extensions of Snek Game
+ 1. Displaying Score on Game Over Screen
+  //TODO
+ 2. Difficulty Level
+  //TODO
+ 3. Leader Board
+  //TODO
+ 4. Decreasing Game Borders
+  //TODO
 ## Built With
 * [Processing](https://processing.org/)
 
