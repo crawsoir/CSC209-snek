@@ -8,7 +8,11 @@
 An interpretation of the classic snake game. Playable for a single player. 
 
 ## Screen Shots
-//Add screen shots of final version
+<img src="IMAGES/menuScreen1.jpg" alt="alt text" width="300"> <img src="IMAGES/menuScreen2.jpg" alt="alt text" width="300">
+<img src="IMAGES/gameInPlay.png" alt="alt text" width="300"> <img src="IMAGES/gameInPlay2.jpg" alt="alt text" width="300">
+
+<img src="IMAGES/instructions.png" alt="Instructions" width="400"> 
+<img src="IMAGES/paused.jpg" alt="alt text" width="300"> 
 
 ## Installation
 WINDOWS
