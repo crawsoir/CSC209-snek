@@ -87,40 +87,40 @@ void draw() {
 void collision() {
   //button color change
   if (currentScreen == 0) {
-    if (menuScreen.play_button.MouseIsOver())
-      menuScreen.play_button.clr= color(150);
+    if (menuScreen.playButton.MouseIsOver())
+      menuScreen.playButton.clr= color(150);
     else
-      menuScreen.play_button.clr= color(230);
+      menuScreen.playButton.clr= color(230);
   } else if (currentScreen == 2) {
-    if (gameOverScreen.menu_button.MouseIsOver())
-      gameOverScreen.menu_button.clr= color (180);
+    if (gameOverScreen.menuButton.MouseIsOver())
+      gameOverScreen.menuButton.clr= color (180);
     else
-      gameOverScreen.menu_button.clr= color (214);
+      gameOverScreen.menuButton.clr= color (214);
   }
 }
 
 void mouseClicked() {
   //play game button pressed
-  if (menuScreen.play_button.MouseIsOver() && currentScreen == 0) {
+  if (menuScreen.playButton.MouseIsOver() && currentScreen == 0) {
     //display play game screen
     menuScreen.buttonPressed = true;
   }
-  if (menuScreen.instructions_button.MouseIsOver() && currentScreen == 0) {
+  if (menuScreen.instructionsButton.MouseIsOver() && currentScreen == 0) {
     JOptionPane.showMessageDialog(null, "Press play game and any arrow key to start the game. Control the snake using your arrow keys. Avoid colliding with the snake tail and wall.", 
       "Instructions", JOptionPane.INFORMATION_MESSAGE);//Display instructions on pop up
   }
-  if (gameOverScreen.menu_button.MouseIsOver() && currentScreen == 2) {
+  if (gameOverScreen.menuButton.MouseIsOver() && currentScreen == 2) {
     gameOverScreen.buttonPressed = true;
   }
   //Pause button was pressed
-  if (gameScreen.pause_button.MouseIsOver() && currentScreen == 1) {
+  if (gameScreen.pauseButton.MouseIsOver() && currentScreen == 1) {
     gameScreen.python.setSpeed(0, 0);//Stop the snake
     Object[] options = {"Continue"};
     JOptionPane.showOptionDialog(null, "Game Paused", null, JOptionPane.OK_OPTION, 
       JOptionPane.PLAIN_MESSAGE, null, options, options[0]);//Display paused game pop up
   }
   //Quit Button was pressed
-  if (gameScreen.quit_button.MouseIsOver() && currentScreen == 1) {
+  if (gameScreen.quitButton.MouseIsOver() && currentScreen == 1) {
     currentScreen = 0; //Set to initial menu screen
   }
 }

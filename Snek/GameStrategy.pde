@@ -8,8 +8,8 @@ public class GameStrategy implements ScreenStrategy {
   ConsumableFactory CFactory = new ConsumableFactory();
   Consumable food = CFactory.getConsumable(foodArray[r.nextInt(2)]);
   SnekHead python = new SnekHead(10, 10);
-  Button pause_button = new Button("Pause", 450, 50, 100, 50, (214));
-  Button quit_button = new Button("Quit", 450, 125, 100, 50, (214));
+  Button pauseButton = new Button("Pause", 450, 50, 100, 50, (214));
+  Button quitButton = new Button("Quit", 450, 125, 100, 50, (214));
 
   public GameStrategy() {
   }
@@ -21,8 +21,8 @@ public class GameStrategy implements ScreenStrategy {
     textAlign(LEFT, LEFT);
     fill(0);
     text("Score: " + score, 5, 28);
-    pause_button.Draw();
-    quit_button.Draw();
+    pauseButton.Draw();
+    quitButton.Draw();
 
     python.update();
     if (python.eat(food)) {
