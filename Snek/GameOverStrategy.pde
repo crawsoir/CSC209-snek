@@ -12,7 +12,7 @@ public class GameOverStrategy implements ScreenStrategy {
     public void display() {
     fill(255, 0, 0);
     textSize(40);
-    text("Game Over", width / 2.5, 100);
+    text("Game Over", width / 2, 100);
     textSize(25);
     menu_button.Draw();
   }

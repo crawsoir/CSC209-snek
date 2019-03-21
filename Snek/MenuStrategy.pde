@@ -10,6 +10,7 @@ public class MenuStrategy implements ScreenStrategy {
     public void display() {
     //this.mouseClicked();
     textSize(40);
+    textAlign(CENTER);
     text("SNEK", width / 2, 100);
     textSize(25);
     play_button.Draw();
