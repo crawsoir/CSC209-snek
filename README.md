@@ -2,8 +2,7 @@
 * **Qianqian Feng** - _Contributor_  
 * **William Li** - _Contributor_  
 * **Manahil Masroor** - _Contributor_  
-* **David Huynh** - _Contributor_  
-* **BingMing Zhang** - _Contributor_ 
+* **David Huynh** - _Contributor_ 
 
 # CSC209-snek
 An interpretation of the classic snake game. Playable for a single player. 
@@ -13,7 +12,8 @@ An interpretation of the classic snake game. Playable for a single player.
 
 ## Installation
 WINDOWS
-Download and run the executable file (provide link to final version later -to create .exe just go to File->Export Application)
+Download and run the executable file
+  //TODO: (provide link to final version later -to create .exe just go to File->Export Application)
 
 ## How to Play
 - The home screen contains Play, Exit and Instruction buttons:
@@ -29,12 +29,134 @@ Download and run the executable file (provide link to final version later -to cr
   - Click the Menu button to be returned back to the menu where you can restart your game or look at instructions
 
 ## Directory Structure
-//TODO
+  //TODO
 ## Major Classes and Functions
+| Class | Class Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Snek` class| Class DEfinition |
+| `SnekParts` class | Class DEfinition |
+| `SnekHead` class| Class DEfinition |
+| `SnekBody` class| Class DEfinition |
+| `SnekTail` class| Class DEfinition |
+| `Screen Strategy` class | Class DEfinition |
+| `Button` class | Class DEfinition |
 - Snek.pde contains the major game loops to setup the view of the game and makes any changes when the user interacts with the game
-## How to Extend our Game
- //TODO
+### `Snek` Class
+#### Purpose:
+| `Snek`'s Variables | Variable Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `v` | v def |
+| `v` | v def |
+| `v` | v def  |
 
+| `Snek`'s Functions | Function Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `function` | fcn def |
+| `function` | fcn def |
+### `SnekParts` Class
+#### Purpose:
+### `SnekHead` Class
+#### Purpose:
+| `SnekHead`'s Variables | Variable Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `v` | v def |
+| `v` | v def |
+| `v` | v def  |
+
+| `SnekHead`'s Functions | Function Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `function` | fcn def |
+| `function` | fcn def |
+### `SnekBody` Class
+#### Purpose:
+| `SnekBody`'s Variables | Variable Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `v` | v def |
+| `v` | v def |
+| `v` | v def  |
+#### Functions:
+| `SnekBody`'s Functions | Function Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `function` | fcn def |
+| `function` | fcn def |
+### `SnekTail` Class
+#### Purpose:
+
+| `SnekTail`'s Variables | Variable Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `v` | v def |
+| `v` | v def |
+| `v` | v def  |
+
+| `SnekTail`'s Functions | Function Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `function` | fcn def |
+| `function` | fcn def |
+### `ScreenStrategy` Class
+#### Purpose:
+| `ScreenStrategy`'s Variables | Variable Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `v` | v def |
+| `v` | v def |
+| `v` | v def  |
+
+| `ScreenStrategy`'s Functions | Function Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `function` | fcn def |
+| `function` | fcn def |
+#### Classes that use ScreenStrategy
+  - MenuStrategy
+    - Purpose:
+  - GameStrategy
+    - Purpose:
+  - GameOverStrategy
+    - Purpose:
+### `ConsumableFactory`
+  #### Purpose:
+  #### Classes that use ScreenStrategy
+  - Consumable
+    - Purpose:
+### `Button` Class
+  #### Parameters: 
+   - `String labelB`
+   - `float xPos`
+   - `float yPos`
+   - `float widthB`
+   - `float heightB` 
+  #### Purpose:
+  - 
+  - The five buttons are `Play Game`, `Instructions`, `Pause`, `Quit`, and `Menu`.
+  - Menu Screen:
+    - `Play Game` sets up and displays the Play Game Screen
+    - `Instructions` displays a pop-up dialog box with the instructions.
+  - Game Screen
+    - `Pause` stops the snek from moving and displays a pop-up dialog box and continues once the continue on the pop up is pressed.
+    - `Quit` leaves the game and displays the Menu Screen.
+  -  Game Over Screen
+      - `Menu` displays the Menu Screen.
+
+| `Button`'s Variables | Variable Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `String label` | The text to be displayed on the button. |
+| `float xPosition` | The x position the button will be displayed on the GUI. |
+| `float yPosition` | The y position the button will be displayed on the GUI.  |
+| `float width` | The width of the button. |
+| `float height` | The height of the button. |
+| `color clr` | The fill color of the button. |
+
+| `Buttons`'s Functions | Function Description |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `void Draw()` | Generates a Box containing one or more integers. |
+| `boolean MouseIsOver()` | Generates a Block with 9 Boxes. |
+## Extensions of Snek Game
+ ### 1. Displaying Score on Game Over Screen
+  //TODO
+ ### 2. Difficulty Level
+  //TODO
+ #### 3. Leader Board
+  //TODO
+ #### 4. Decreasing Game Borders
+  //TODO
 ## Built With
 * [Processing](https://processing.org/)
 
