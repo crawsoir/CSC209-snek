@@ -14,11 +14,6 @@ An interpretation of the classic snake game. Playable for a single player.
 <img src="IMAGES/instructions.png" alt="Instructions" width="400"> 
 <img src="IMAGES/paused.jpg" alt="alt text" width="300"> 
 
-## Installation
-WINDOWS
-Download and run the executable file
-  //TODO: (provide link to final version later -to create .exe just go to File->Export Application)
-
 ## How to Play
 - The home screen contains Play, Exit and Instruction buttons:
   - Click on play if you wish to be sent to where the game takes place
