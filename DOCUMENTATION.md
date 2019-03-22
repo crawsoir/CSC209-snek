@@ -7,11 +7,9 @@
 | `SnekHead` class| Used to control the Snek itself containing the Snek's head and the rest of its body parts. |
 | `SnekBody` class| Used to hold one of the Snek's body's x and y coordinates. |
 | `SnekTail` class| Used to allow the game to know where the end of the Snek resides. |
-| `Screen Strategy` class | Class DEfinition |
-| `Button` class | Class DEfinition |
+| `Screen Strategy` class | Used to control what is displayed on screen at one time. |
+| `Button` class | Used to control the buttons displayed on screen. |
 - Snek.pde contains the major game loops to setup the view of the game and makes any changes when the user interacts with the game
-### `Snek` Class
-#### Purpose:
 
 ### `SnekHead` Class
 #### Purpose: To hold the first part of the Snek which enables the game to control the rest of the Snek.
