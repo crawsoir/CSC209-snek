@@ -65,29 +65,23 @@
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `update` | Do nothing as the end of the Snek. |
 ### `ScreenStrategy` Class
-#### Purpose:
-| `ScreenStrategy`'s Variables | Variable Description |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `v` | v def |
-| `v` | v def |
-| `v` | v def  |
+#### Purpose: Screenstrategy allows a modular and easy-to-maintain GUI implementation 
 
 | `ScreenStrategy`'s Functions | Function Description |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `function` | fcn def |
-| `function` | fcn def |
+| display() | the main method to call for screen objects to execute and display directly to the GUI  | 
 #### Classes that use ScreenStrategy
   - MenuStrategy
-    - Purpose:
+    - Purpose: Displays and handles the main menu screen
   - GameStrategy
-    - Purpose:
+    - Purpose: Displays and handles the main playing game screen, including user inputs
   - GameOverStrategy
-    - Purpose:
+    - Purpose: Displays and handles the gameover screen
 ### `ConsumableFactory`
-  #### Purpose:
-  #### Classes that use ScreenStrategy
+  #### Purpose: to hide the creation logic of our consumables from players whilst referring to all consumable objects using a  single interface.
+  #### Classes that use ConsumableFactory
   - Consumable
-    - Purpose:
+    - Purpose: By implementing this interface, users will be able to create new types of consumables that will be created by the factory
 ### `Button` Class
   #### Parameters: 
    - `String labelB`
