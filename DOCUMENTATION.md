@@ -12,16 +12,7 @@
 - Snek.pde contains the major game loops to setup the view of the game and makes any changes when the user interacts with the game
 ### `Snek` Class
 #### Purpose:
-| `Snek`'s Variables | Variable Description |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `v` | v def |
-| `v` | v def |
-| `v` | v def  |
 
-| `Snek`'s Functions | Function Description |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `function` | fcn def |
-| `function` | fcn def |
 ### `SnekHead` Class
 #### Purpose: To hold the first part of the Snek which enables the game to control the rest of the Snek.
 | `SnekHead`'s Variables | Variable Description |
@@ -90,7 +81,7 @@
    - `float widthB`
    - `float heightB` 
   #### Purpose:
-  - 
+  - Creates a button of specified width, height, and colour at a specified x and y location
   - The five buttons are `Play Game`, `Instructions`, `Pause`, `Quit`, and `Menu`.
   - Menu Screen:
     - `Play Game` sets up and displays the Play Game Screen
@@ -116,10 +107,20 @@
 | `boolean MouseIsOver()` | Generates a Block with 9 Boxes. |
 ## Extensions of Snek Game
  ### 1. Displaying Score on Game Over Screen
-  //TODO
+- Save the score after a game has ended in `GameStrategy`.
+- Create a new function, `int gameScore()`, in `GameStrategy`, that returns the score when called in `Snek`.
+- Modify `GameOverStrategy` to take in `int GameScore` as a parameter.
+- Modify `GameOverStrategy Draw` function to display `gameScore` on the GUI.
+- Pass the `gameScore` to `GameOverStrategy` as a parameter and display it as text.
  ### 2. Difficulty Level
-  //TODO
+ - Add a `GameModeStrategy` class that will be used as an interface for different mode classes.
+ - Create `EasyMode` which will decrease the snek spead in `GameStrategy`.
+ - Create `HardMode` which will increase the snek spead in `GameStrategy`.
  #### 3. Leader Board
-  //TODO
+ - Save a players score in `Snek` class.
+ - Create a list of 10 scores for the top ten scores.
+ - Add the players score to the list of scores if it is greater than the lowest score in the list.
+ - Add a `leaderBoard Button` to the Menu screen. The button will display the `leaderBoardScreen`.
+ - Create a new class, `LeaderBoardScreen`, that takes in parameters of a list of scores and displays them in order.
  #### 4. Decreasing Game Borders
   //TODO
